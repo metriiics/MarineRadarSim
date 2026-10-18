@@ -1,0 +1,5 @@
+/home/metriics/templates/c_plus/MarineRadarSim/build/CMakeFiles/MarineRadarSim.dir
+/home/metriics/templates/c_plus/MarineRadarSim/build/CMakeFiles/edit_cache.dir
+/home/metriics/templates/c_plus/MarineRadarSim/build/CMakeFiles/rebuild_cache.dir
+/home/metriics/templates/c_plus/MarineRadarSim/build/CMakeFiles/MarineRadarSim_autogen_timestamp_deps.dir
+/home/metriics/templates/c_plus/MarineRadarSim/build/CMakeFiles/MarineRadarSim_autogen.dir
