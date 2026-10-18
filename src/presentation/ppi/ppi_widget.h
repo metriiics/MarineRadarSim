@@ -22,6 +22,8 @@ public:
     // Qt::AlignRight — вплотную к правому краю (к колонке данных).
     void setAlignment(Qt::Alignment alignment);
 
+    void setHeadingLineVisible(bool visible);
+
     // Окружность рабочей области (внутренние концы рисок) в координатах виджета.
     [[nodiscard]] QPointF center() const;
     [[nodiscard]] double radius() const;
@@ -49,6 +51,7 @@ private:
 
     QList<QPointer<QWidget>> reservedAreas_;
     Qt::Alignment alignment_{Qt::AlignHCenter};
+    bool headingLineVisible_{true};
 };
 
 } // namespace mrs::ui

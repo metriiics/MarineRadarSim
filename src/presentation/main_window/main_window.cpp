@@ -5,10 +5,13 @@
 #include "presentation/theme/theme.h"
 #include "presentation/title_bar/title_bar.h"
 #include "presentation/widgets/clock_icon.h"
+#include "presentation/widgets/cursor_style.h"
 #include "presentation/widgets/data_panel.h"
+#include "presentation/widgets/filler_panel.h"
 #include "presentation/widgets/level_control.h"
 #include "presentation/widgets/tuning_indicator.h"
 
+#include <QApplication>
 #include <QDateTime>
 #include <QFontMetrics>
 #include <QFrame>
@@ -146,9 +149,7 @@ QFrame* createSplitPanel(const QString& name, const QString& state, int width, Q
     auto* nameLabel = theme::createText(name, panel);
     nameLabel->setAlignment(Qt::AlignCenter);
 
-    auto* divider = new QFrame(panel);
-    divider->setFixedWidth(1);
-    divider->setStyleSheet(QStringLiteral("background: %1;").arg(theme::kFrame.name()));
+    auto* divider = theme::createDivider(panel);
 
     // Ячейка состояния — по тексту: отступ от перегородки и пустое место примерно в один символ
     // после слова. Остальную длину блока занимает название.
@@ -258,6 +259,7 @@ MainWindow::MainWindow(QWidget* parent)
     setMenuWidget(titleBar_);
     connect(titleBar_, &TitleBar::settingsRequested, this, &MainWindow::toggleSettings);
 
+
     auto* centralWidget = new QWidget(this);
     centralWidget->setObjectName(QStringLiteral("centralWidget"));
     centralWidget->setMouseTracking(true);
@@ -275,11 +277,27 @@ MainWindow::MainWindow(QWidget* parent)
     layout->addWidget(pages_);
 
     connect(settingsPage_, &SettingsPage::closeRequested, this, &MainWindow::toggleSettings);
-    connect(settingsPage_, &SettingsPage::fullScreenToggled, this, &MainWindow::setFullScreenMode);
+    connect(settingsPage_, &SettingsPage::settingsChanged, this, [this](const UiSettings& settings) {
+        settings_ = settings;
+        settings_.save();
+        applySettings();
+    });
 
-    // F10 — настройки и в полноэкранном режиме, когда заголовка окна нет.
-    auto* settingsShortcut = new QShortcut(QKeySequence(Qt::Key_F10), this);
-    connect(settingsShortcut, &QShortcut::activated, this, &MainWindow::toggleSettings);
+    // Клавиши из раздела «Управление»: настройки (по умолчанию F10) работают и в полноэкранном
+    // режиме, когда заголовка окна нет; полноэкранный режим — F11.
+    settingsShortcut_ = new QShortcut(this);
+    connect(settingsShortcut_, &QShortcut::activated, this, &MainWindow::toggleSettings);
+    fullScreenShortcut_ = new QShortcut(this);
+    connect(fullScreenShortcut_, &QShortcut::activated, this, [this] {
+        settings_.fullScreen = !settings_.fullScreen;
+        settings_.save();
+        settingsPage_->setSettings(settings_);
+        applySettings();
+    });
+
+    settings_ = UiSettings::load();
+    settingsPage_->setSettings(settings_);
+    applySettings();
 
     auto* clockTimer = new QTimer(this);
     connect(clockTimer, &QTimer::timeout, this, &MainWindow::updateClock);
@@ -301,11 +319,21 @@ QWidget* MainWindow::createWorkstation()
     dataColumn_ = createDataColumn(workstation);
     dataColumn_->setFixedWidth(kDataColumnWidth);
 
-    layout->addStretch(1);
+    // Боковые поля на широком мониторе — за границами интерфейса РЛС; в них оформление
+    // из настроек (по умолчанию логотип Дальрыбвтуза). На экране 5:4 их ширина нулевая.
+    for (int i = 0; i < 2; ++i)
+    {
+        auto* field = new FillerPanel(workstation, FillerPanel::Frame::None);
+        field->setMinimumWidth(0);
+        field->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        fillers_.append(field);
+    }
+
+    layout->addWidget(fillers_[0], 1);
     layout->addWidget(ppiArea_);
     layout->addSpacing(kSideGap);
     layout->addWidget(dataColumn_);
-    layout->addStretch(1);
+    layout->addWidget(fillers_[1], 1);
 
     workstation->installEventFilter(this);
 
@@ -567,10 +595,9 @@ QWidget* MainWindow::createPpiArea(QWidget* parent)
     vrmPanel->setFixedSize(kVrmWidth, kVrmHeight);
     auto* vrmLayout = new QVBoxLayout(vrmPanel);
     vrmLayout->setContentsMargins(kPadding, 0, kPadding, 0);
-    auto* vrmLabel = theme::createText(
-        QStringLiteral("ВД<br>%1&nbsp;&nbsp;МИЛЬ").arg(theme::valueSpan(QStringLiteral("0.243"))), vrmPanel);
-    vrmLabel->setAlignment(Qt::AlignCenter);
-    vrmLayout->addWidget(vrmLabel);
+    vrmLabel_ = theme::createText({}, vrmPanel);  // текст задаёт applySettings() — цвет цифр зависит от схемы
+    vrmLabel_->setAlignment(Qt::AlignCenter);
+    vrmLayout->addWidget(vrmLabel_);
     bottomRight->addWidget(vrmPanel, 0, Qt::AlignRight);
 
     layout->addWidget(bottomRightStack, 0, 0, Qt::AlignBottom | Qt::AlignRight);
@@ -672,12 +699,54 @@ QWidget* MainWindow::createDataColumn(QWidget* parent)
 void MainWindow::toggleSettings()
 {
     const bool open = pages_->currentWidget() != settingsPage_;
-    if (open)
-    {
-        settingsPage_->setFullScreen(isFullScreen());
-    }
     pages_->setCurrentWidget(open ? static_cast<QWidget*>(settingsPage_) : workstation_);
     titleBar_->setSettingsActive(open);
+}
+
+void MainWindow::showInitial()
+{
+    if (settings_.fullScreen)
+    {
+        titleBar_->setVisible(false);
+        showFullScreen();
+    }
+    else
+    {
+        showMaximized();
+    }
+}
+
+void MainWindow::applySettings()
+{
+    theme::setColorScheme(settings_.colorScheme);
+    theme::setFontChoice(settings_.font);
+    qApp->setStyleSheet(theme::styleSheet());
+
+    // Виджеты, которые рисуют сами, берут шрифт и цвета не из таблицы стилей.
+    ppi_->setFont(theme::font());
+    ppi_->setCursor(makeCursor(settings_.cursor, theme::palette().cursor));
+    ppi_->setHeadingLineVisible(settings_.headingLine);
+    for (FillerPanel* filler : fillers_)
+    {
+        filler->setFillerStyle(settings_.filler);
+    }
+    vrmLabel_->setText(QStringLiteral("ВД<br>%1&nbsp;&nbsp;МИЛЬ").arg(theme::valueSpan(QStringLiteral("0.243"))));
+    updateClock();
+
+    settingsShortcut_->setKey(settings_.key(key_action::kOpenSettings));
+    fullScreenShortcut_->setKey(settings_.key(key_action::kFullScreen));
+
+    if (isVisible() && settings_.fullScreen != isFullScreen())
+    {
+        setFullScreenMode(settings_.fullScreen);
+    }
+
+    // Ширина текста зависит от шрифта — блоки, привязанные к цифрам шкалы, пересчитываются.
+    alignBlocksToScale();
+    for (QWidget* widget : QApplication::allWidgets())
+    {
+        widget->update();
+    }
 }
 
 void MainWindow::setFullScreenMode(bool fullScreen)

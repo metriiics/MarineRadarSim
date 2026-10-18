@@ -97,10 +97,10 @@ void TitleBarButton::paintEvent(QPaintEvent* /*event*/)
 
     if (hovered_)
     {
-        painter.fillRect(rect(), kind_ == Kind::Close ? kCloseHover : theme::kHover);
+        painter.fillRect(rect(), kind_ == Kind::Close ? kCloseHover : theme::palette().hover);
     }
 
-    painter.setPen(QPen(active_ ? theme::kValue : theme::kText, 1.4));
+    painter.setPen(QPen(active_ ? theme::palette().value : theme::palette().text, 1.4));
     painter.setBrush(Qt::NoBrush);
 
     const QPointF c = QRectF(rect()).center();
@@ -177,9 +177,7 @@ void TitleBar::setSettingsActive(bool active)
 void TitleBar::paintEvent(QPaintEvent* /*event*/)
 {
     QPainter painter(this);
-    painter.fillRect(rect(), theme::kBackground);
-    painter.setPen(theme::kFrame);
-    painter.drawLine(rect().bottomLeft(), rect().bottomRight());
+    painter.fillRect(rect(), theme::palette().background);
 }
 
 void TitleBar::mousePressEvent(QMouseEvent* event)

@@ -31,6 +31,11 @@
 },
 {
   "directory": "/home/metriics/templates/c_plus/MarineRadarSim/build",
+  "command": "/usr/bin/c++ -DMRS_VERSION=\\\"0.1\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23 -o CMakeFiles/MarineRadarSim.dir/src/presentation/settings/interface_settings.cpp.o -c /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/interface_settings.cpp",
+  "file": "/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/interface_settings.cpp"
+},
+{
+  "directory": "/home/metriics/templates/c_plus/MarineRadarSim/build",
   "command": "/usr/bin/c++ -DMRS_VERSION=\\\"0.1\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23 -o CMakeFiles/MarineRadarSim.dir/src/presentation/theme/theme.cpp.o -c /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/theme/theme.cpp",
   "file": "/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/theme/theme.cpp"
 },
@@ -46,8 +51,23 @@
 },
 {
   "directory": "/home/metriics/templates/c_plus/MarineRadarSim/build",
+  "command": "/usr/bin/c++ -DMRS_VERSION=\\\"0.1\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23 -o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/cursor_style.cpp.o -c /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/cursor_style.cpp",
+  "file": "/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/cursor_style.cpp"
+},
+{
+  "directory": "/home/metriics/templates/c_plus/MarineRadarSim/build",
   "command": "/usr/bin/c++ -DMRS_VERSION=\\\"0.1\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23 -o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/data_panel.cpp.o -c /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/data_panel.cpp",
   "file": "/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/data_panel.cpp"
+},
+{
+  "directory": "/home/metriics/templates/c_plus/MarineRadarSim/build",
+  "command": "/usr/bin/c++ -DMRS_VERSION=\\\"0.1\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23 -o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/emblem.cpp.o -c /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/emblem.cpp",
+  "file": "/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/emblem.cpp"
+},
+{
+  "directory": "/home/metriics/templates/c_plus/MarineRadarSim/build",
+  "command": "/usr/bin/c++ -DMRS_VERSION=\\\"0.1\\\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23 -o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/filler_panel.cpp.o -c /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/filler_panel.cpp",
+  "file": "/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/filler_panel.cpp"
 },
 {
   "directory": "/home/metriics/templates/c_plus/MarineRadarSim/build",

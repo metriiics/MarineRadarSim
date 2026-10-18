@@ -10,6 +10,8 @@ MarineRadarSim_autogen/timestamp: \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/main_window/main_window.h \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/ppi/ppi_widget.cpp \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/ppi/ppi_widget.h \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/interface_settings.cpp \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/interface_settings.h \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/settings_page.cpp \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/settings_page.h \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/theme/theme.cpp \
@@ -18,8 +20,14 @@ MarineRadarSim_autogen/timestamp: \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/title_bar/title_bar.h \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/clock_icon.cpp \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/clock_icon.h \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/cursor_style.cpp \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/cursor_style.h \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/data_panel.cpp \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/data_panel.h \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/emblem.cpp \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/emblem.h \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/filler_panel.cpp \
+	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/filler_panel.h \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/level_control.cpp \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/level_control.h \
 	/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/tuning_indicator.cpp \
@@ -304,6 +312,9 @@ MarineRadarSim_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
@@ -387,6 +398,12 @@ MarineRadarSim_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QColor \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QCursor \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QFont \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QImage \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QKeySequence \
+	/usr/include/x86_64-linux-gnu/qt6/QtGui/QPixmap \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \

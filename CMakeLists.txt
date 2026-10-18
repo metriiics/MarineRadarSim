@@ -23,6 +23,8 @@ add_executable(MarineRadarSim
 
     src/presentation/settings/settings_page.cpp
     src/presentation/settings/settings_page.h
+    src/presentation/settings/interface_settings.cpp
+    src/presentation/settings/interface_settings.h
 
     src/presentation/theme/theme.cpp
     src/presentation/theme/theme.h
@@ -33,8 +35,17 @@ add_executable(MarineRadarSim
     src/presentation/widgets/clock_icon.cpp
     src/presentation/widgets/clock_icon.h
 
+    src/presentation/widgets/cursor_style.cpp
+    src/presentation/widgets/cursor_style.h
+
     src/presentation/widgets/data_panel.cpp
     src/presentation/widgets/data_panel.h
+
+    src/presentation/widgets/emblem.cpp
+    src/presentation/widgets/emblem.h
+
+    src/presentation/widgets/filler_panel.cpp
+    src/presentation/widgets/filler_panel.h
 
     src/presentation/widgets/level_control.cpp
     src/presentation/widgets/level_control.h

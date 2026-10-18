@@ -25,7 +25,7 @@ void ClockIcon::paintEvent(QPaintEvent* /*event*/)
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
 
-    QPen pen(theme::kText, 1.4);
+    QPen pen(theme::palette().text, 1.4);
     pen.setCapStyle(Qt::RoundCap);
     painter.setPen(pen);
 

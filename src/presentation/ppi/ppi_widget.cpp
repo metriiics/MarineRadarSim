@@ -176,17 +176,26 @@ void PpiWidget::paintEvent(QPaintEvent* /*event*/)
 {
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.fillRect(rect(), theme::kBackground);
+    painter.fillRect(rect(), theme::palette().background);
 
     drawBearingScale(painter);
-    drawHeadingLine(painter);
+    if (headingLineVisible_)
+    {
+        drawHeadingLine(painter);
+    }
+}
+
+void PpiWidget::setHeadingLineVisible(bool visible)
+{
+    headingLineVisible_ = visible;
+    update();
 }
 
 void PpiWidget::drawHeadingLine(QPainter& painter) const
 {
     // Отметка курса: при ориентации «Нос» — всегда на 0°.
     const QPointF c = center();
-    painter.setPen(QPen(theme::kHeadingLine, 1.5));
+    painter.setPen(QPen(theme::palette().headingLine, 1.5));
     painter.drawLine(c, c + bearingDirection(0.0) * radius());
 }
 
@@ -200,8 +209,8 @@ void PpiWidget::drawBearingScale(QPainter& painter) const
     }
 
     // Окружность не рисуется сплошной линией — её образуют риски шкалы снаружи рабочей области.
-    QPen minorPen(theme::kPpiOutline, 1.0);
-    QPen majorPen(theme::kPpiOutline, 2.0);
+    QPen minorPen(theme::palette().ppiScale, 1.0);
+    QPen majorPen(theme::palette().ppiScale, 2.0);
     minorPen.setCapStyle(Qt::FlatCap);
     majorPen.setCapStyle(Qt::FlatCap);
 
@@ -217,7 +226,7 @@ void PpiWidget::drawBearingScale(QPainter& painter) const
     }
 
     painter.setFont(labelFont());
-    painter.setPen(theme::kValue);
+    painter.setPen(theme::palette().value);
 
     for (int deg = 0; deg < 360; deg += kLabelStepDeg)
     {

@@ -7,10 +7,11 @@ int main(int argc, char* argv[])
 {
     QApplication app(argc, argv);
     QApplication::setApplicationVersion(QStringLiteral(MRS_VERSION));
-    app.setStyleSheet(mrs::ui::theme::styleSheet());
+    mrs::ui::theme::initFonts();
 
+    // Таблицу стилей, шрифт и цветовую схему задаёт окно по сохранённым настройкам.
     mrs::ui::MainWindow window;
-    window.showMaximized();
+    window.showInitial();
 
     return app.exec();
 }

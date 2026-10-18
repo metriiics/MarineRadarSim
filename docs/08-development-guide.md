@@ -38,6 +38,7 @@
 | spdlog (+fmt) | 1.14.1 | infrastructure/logging |
 | GoogleTest | 1.15.2 | tests |
 | Google Benchmark | 1.9.0 | tests/bench (опционально) |
+| Шрифт Nunito (SIL OFL 1.1) | google/fonts, вариативный | `data/fonts/`, вместе с `OFL.txt` |
 
 ## 8.3. Сборка
 

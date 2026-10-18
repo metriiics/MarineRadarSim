@@ -97,6 +97,14 @@ build CMakeFiles/MarineRadarSim.dir/src/presentation/settings/settings_page.cpp.
   OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
   OBJECT_FILE_DIR = CMakeFiles/MarineRadarSim.dir/src/presentation/settings
 
+build CMakeFiles/MarineRadarSim.dir/src/presentation/settings/interface_settings.cpp.o: CXX_COMPILER__MarineRadarSim_Debug /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/interface_settings.cpp || cmake_object_order_depends_target_MarineRadarSim
+  DEFINES = -DMRS_VERSION=\"0.1\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/MarineRadarSim.dir/src/presentation/settings/interface_settings.cpp.o.d
+  FLAGS = -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23
+  INCLUDES = -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/MarineRadarSim.dir/src/presentation/settings
+
 build CMakeFiles/MarineRadarSim.dir/src/presentation/theme/theme.cpp.o: CXX_COMPILER__MarineRadarSim_Debug /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/theme/theme.cpp || cmake_object_order_depends_target_MarineRadarSim
   DEFINES = -DMRS_VERSION=\"0.1\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/MarineRadarSim.dir/src/presentation/theme/theme.cpp.o.d
@@ -121,9 +129,33 @@ build CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/clock_icon.cpp.o: C
   OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
   OBJECT_FILE_DIR = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets
 
+build CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/cursor_style.cpp.o: CXX_COMPILER__MarineRadarSim_Debug /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/cursor_style.cpp || cmake_object_order_depends_target_MarineRadarSim
+  DEFINES = -DMRS_VERSION=\"0.1\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/cursor_style.cpp.o.d
+  FLAGS = -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23
+  INCLUDES = -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets
+
 build CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/data_panel.cpp.o: CXX_COMPILER__MarineRadarSim_Debug /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/data_panel.cpp || cmake_object_order_depends_target_MarineRadarSim
   DEFINES = -DMRS_VERSION=\"0.1\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/data_panel.cpp.o.d
+  FLAGS = -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23
+  INCLUDES = -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets
+
+build CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/emblem.cpp.o: CXX_COMPILER__MarineRadarSim_Debug /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/emblem.cpp || cmake_object_order_depends_target_MarineRadarSim
+  DEFINES = -DMRS_VERSION=\"0.1\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/emblem.cpp.o.d
+  FLAGS = -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23
+  INCLUDES = -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
+  OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
+  OBJECT_FILE_DIR = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets
+
+build CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/filler_panel.cpp.o: CXX_COMPILER__MarineRadarSim_Debug /home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/filler_panel.cpp || cmake_object_order_depends_target_MarineRadarSim
+  DEFINES = -DMRS_VERSION=\"0.1\" -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/filler_panel.cpp.o.d
   FLAGS = -g -Wall -Wextra -Wpedantic -fPIC -std=gnu++23
   INCLUDES = -I/home/metriics/templates/c_plus/MarineRadarSim/build/MarineRadarSim_autogen/include -I/home/metriics/templates/c_plus/MarineRadarSim/src -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
   OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
@@ -153,7 +185,7 @@ build CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/tuning_indicator.cp
 #############################################
 # Link the executable MarineRadarSim
 
-build MarineRadarSim: CXX_EXECUTABLE_LINKER__MarineRadarSim_Debug CMakeFiles/MarineRadarSim.dir/MarineRadarSim_autogen/mocs_compilation.cpp.o CMakeFiles/MarineRadarSim.dir/src/main.cpp.o CMakeFiles/MarineRadarSim.dir/src/domain/simulation/simulation.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/main_window/main_window.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/ppi/ppi_widget.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/settings/settings_page.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/theme/theme.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/title_bar/title_bar.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/clock_icon.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/data_panel.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/level_control.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/tuning_indicator.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || MarineRadarSim_autogen MarineRadarSim_autogen_timestamp_deps
+build MarineRadarSim: CXX_EXECUTABLE_LINKER__MarineRadarSim_Debug CMakeFiles/MarineRadarSim.dir/MarineRadarSim_autogen/mocs_compilation.cpp.o CMakeFiles/MarineRadarSim.dir/src/main.cpp.o CMakeFiles/MarineRadarSim.dir/src/domain/simulation/simulation.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/main_window/main_window.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/ppi/ppi_widget.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/settings/settings_page.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/settings/interface_settings.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/theme/theme.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/title_bar/title_bar.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/clock_icon.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/cursor_style.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/data_panel.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/emblem.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/filler_panel.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/level_control.cpp.o CMakeFiles/MarineRadarSim.dir/src/presentation/widgets/tuning_indicator.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || MarineRadarSim_autogen MarineRadarSim_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/MarineRadarSim.dir
@@ -211,7 +243,7 @@ build MarineRadarSim_autogen/timestamp MarineRadarSim_autogen/mocs_compilation.c
 #############################################
 # Phony custom command for CMakeFiles/MarineRadarSim_autogen_timestamp_deps
 
-build CMakeFiles/MarineRadarSim_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/MarineRadarSim_autogen_timestamp_deps: phony /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
+build CMakeFiles/MarineRadarSim_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/MarineRadarSim_autogen_timestamp_deps: phony /usr/lib/qt6/libexec/uic /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 
 
 #############################################

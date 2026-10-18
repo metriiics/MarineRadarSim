@@ -26,12 +26,13 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_mrs__ui__SettingsPage_t {
-    uint offsetsAndSizes[10];
+    uint offsetsAndSizes[12];
     char stringdata0[22];
     char stringdata1[15];
     char stringdata2[1];
-    char stringdata3[18];
-    char stringdata4[11];
+    char stringdata3[16];
+    char stringdata4[20];
+    char stringdata5[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_mrs__ui__SettingsPage_t::offsetsAndSizes) + ofs), len 
@@ -40,14 +41,16 @@ Q_CONSTINIT static const qt_meta_stringdata_mrs__ui__SettingsPage_t qt_meta_stri
         QT_MOC_LITERAL(0, 21),  // "mrs::ui::SettingsPage"
         QT_MOC_LITERAL(22, 14),  // "closeRequested"
         QT_MOC_LITERAL(37, 0),  // ""
-        QT_MOC_LITERAL(38, 17),  // "fullScreenToggled"
-        QT_MOC_LITERAL(56, 10)   // "fullScreen"
+        QT_MOC_LITERAL(38, 15),  // "settingsChanged"
+        QT_MOC_LITERAL(54, 19),  // "mrs::ui::UiSettings"
+        QT_MOC_LITERAL(74, 8)   // "settings"
     },
     "mrs::ui::SettingsPage",
     "closeRequested",
     "",
-    "fullScreenToggled",
-    "fullScreen"
+    "settingsChanged",
+    "mrs::ui::UiSettings",
+    "settings"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -71,7 +74,7 @@ Q_CONSTINIT static const uint qt_meta_data_mrs__ui__SettingsPage[] = {
 
  // signals: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Bool,    4,
+    QMetaType::Void, 0x80000000 | 4,    5,
 
        0        // eod
 };
@@ -87,9 +90,9 @@ Q_CONSTINIT const QMetaObject mrs::ui::SettingsPage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<SettingsPage, std::true_type>,
         // method 'closeRequested'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'fullScreenToggled'
+        // method 'settingsChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<bool, std::false_type>
+        QtPrivate::TypeAndForceComplete<const mrs::ui::UiSettings &, std::false_type>
     >,
     nullptr
 } };
@@ -101,7 +104,7 @@ void mrs::ui::SettingsPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c
         (void)_t;
         switch (_id) {
         case 0: _t->closeRequested(); break;
-        case 1: _t->fullScreenToggled((*reinterpret_cast< std::add_pointer_t<bool>>(_a[1]))); break;
+        case 1: _t->settingsChanged((*reinterpret_cast< std::add_pointer_t<mrs::ui::UiSettings>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -114,8 +117,8 @@ void mrs::ui::SettingsPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c
             }
         }
         {
-            using _t = void (SettingsPage::*)(bool );
-            if (_t _q_method = &SettingsPage::fullScreenToggled; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            using _t = void (SettingsPage::*)(const mrs::ui::UiSettings & );
+            if (_t _q_method = &SettingsPage::settingsChanged; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
@@ -160,7 +163,7 @@ void mrs::ui::SettingsPage::closeRequested()
 }
 
 // SIGNAL 1
-void mrs::ui::SettingsPage::fullScreenToggled(bool _t1)
+void mrs::ui::SettingsPage::settingsChanged(const mrs::ui::UiSettings & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);

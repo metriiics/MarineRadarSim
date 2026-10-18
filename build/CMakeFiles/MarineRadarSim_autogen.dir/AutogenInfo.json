@@ -200,6 +200,12 @@
 			null
 		],
 		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/interface_settings.h",
+			"MU",
+			"H3DT5S75SK/moc_interface_settings.cpp",
+			null
+		],
+		[
 			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/settings_page.h",
 			"MU",
 			"H3DT5S75SK/moc_settings_page.cpp",
@@ -224,9 +230,27 @@
 			null
 		],
 		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/cursor_style.h",
+			"MU",
+			"SXWCTKP4DW/moc_cursor_style.cpp",
+			null
+		],
+		[
 			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/data_panel.h",
 			"MU",
 			"SXWCTKP4DW/moc_data_panel.cpp",
+			null
+		],
+		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/emblem.h",
+			"MU",
+			"SXWCTKP4DW/moc_emblem.cpp",
+			null
+		],
+		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/filler_panel.h",
+			"MU",
+			"SXWCTKP4DW/moc_filler_panel.cpp",
 			null
 		],
 		[
@@ -321,6 +345,11 @@
 			null
 		],
 		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/interface_settings.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/settings/settings_page.cpp",
 			"MU",
 			null
@@ -341,7 +370,22 @@
 			null
 		],
 		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/cursor_style.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/data_panel.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/emblem.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/metriics/templates/c_plus/MarineRadarSim/src/presentation/widgets/filler_panel.cpp",
 			"MU",
 			null
 		],

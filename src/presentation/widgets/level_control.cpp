@@ -52,7 +52,7 @@ void LevelBar::paintEvent(QPaintEvent* event)
     }
 
     QPainter painter(this);
-    painter.fillRect(QRect(inner.left(), inner.top(), fillWidth, inner.height()), theme::kIndicator);
+    painter.fillRect(QRect(inner.left(), inner.top(), fillWidth, inner.height()), theme::palette().indicator);
 }
 
 void LevelBar::wheelEvent(QWheelEvent* event)
@@ -97,9 +97,7 @@ LevelControl::LevelControl(const QString& title, double initialValue, QWidget* p
     auto* titleLabel = theme::createText(title, this);
     titleLabel->setAlignment(Qt::AlignCenter);
 
-    auto* divider = new QFrame(this);
-    divider->setFixedWidth(kDividerWidth);
-    divider->setStyleSheet(QStringLiteral("background: %1;").arg(theme::kFrame.name()));
+    auto* divider = theme::createDivider(this);
 
     layout->addWidget(titleLabel, 1);
     layout->addWidget(divider);

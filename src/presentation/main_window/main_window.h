@@ -1,15 +1,19 @@
 #pragma once
 
+#include "presentation/settings/interface_settings.h"
+
 #include <QList>
 #include <QMainWindow>
 
 class QHBoxLayout;
 class QLabel;
+class QShortcut;
 class QStackedWidget;
 
 namespace mrs::ui
 {
 
+class FillerPanel;
 class PpiWidget;
 class SettingsPage;
 class TitleBar;
@@ -20,6 +24,9 @@ class MainWindow final : public QMainWindow
 {
 public:
     explicit MainWindow(QWidget* parent = nullptr);
+
+    // Показать окно при запуске: развёрнутым или во весь экран — по сохранённым настройкам.
+    void showInitial();
 
 protected:
     bool eventFilter(QObject* watched, QEvent* event) override;
@@ -32,6 +39,7 @@ private:
     void alignBlocksToScale();
 
     void toggleSettings();
+    void applySettings();
     void setFullScreenMode(bool fullScreen);
     void updateClock();
     bool handleWindowResize(QEvent* event);
@@ -60,6 +68,11 @@ private:
     SettingsPage* settingsPage_{nullptr};
     PpiWidget* ppi_{nullptr};
     QLabel* clockLabel_{nullptr};
+    QLabel* vrmLabel_{nullptr};
+    QList<FillerPanel*> fillers_;   // боковые поля за границами интерфейса (слева, справа)
+    QShortcut* settingsShortcut_{nullptr};
+    QShortcut* fullScreenShortcut_{nullptr};
+    UiSettings settings_;
     QLabel* dateLabel_{nullptr};
 };
 

@@ -42,7 +42,7 @@ void TuningIndicator::paintEvent(QPaintEvent* event)
 
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing);
-    painter.setPen(QPen(theme::kIndicator, 1.5));
+    painter.setPen(QPen(theme::palette().indicator, 1.5));
     painter.drawPolyline(points, std::size(points));
 }
 
